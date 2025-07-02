@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ArrowDown, Plus, Fire, Octagon, Trash2, Edit2 } from 'lucide-react';
+import { ArrowDown, Plus, Flame, Octagon, Trash2, Edit2 } from 'lucide-react';
 import { List, ListItem } from '../types';
 
 interface ListViewProps {
@@ -238,7 +238,7 @@ const ListView: React.FC<ListViewProps> = ({ list, onUpdateList, onBack }) => {
                           : 'text-gray-400 hover:text-red-500'
                       }`}
                     >
-                      <Fire size={18} />
+                      <Flame size={18} />
                     </button>
                     <button
                       onClick={() => deleteItem(item.id)}

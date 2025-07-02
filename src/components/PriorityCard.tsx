@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Fire, Octagon } from 'lucide-react';
+import { Flame, Octagon } from 'lucide-react';
 import { ListItem } from '../types';
 
 interface PriorityCardProps {
@@ -23,7 +23,7 @@ const PriorityCard: React.FC<PriorityCardProps> = ({ priorityItems, onUpdateItem
   return (
     <div className="fixed top-24 right-6 w-80 bg-gradient-to-br from-red-50 to-white rounded-xl shadow-lg border-2 border-red-200 p-6 z-10 max-h-96 overflow-y-auto">
       <div className="flex items-center gap-2 mb-4">
-        <Fire className="text-red-500" size={20} />
+        <Flame className="text-red-500" size={20} />
         <h3 className="text-lg font-semibold text-gray-800">Priority Tasks</h3>
       </div>
 
@@ -44,7 +44,7 @@ const PriorityCard: React.FC<PriorityCardProps> = ({ priorityItems, onUpdateItem
                     className="text-red-400 hover:text-red-600 transition-colors"
                     title="Remove priority"
                   >
-                    <Fire size={14} />
+                    <Flame size={14} />
                   </button>
                   <button
                     onClick={() => handleComplete(item)}

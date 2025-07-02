@@ -1,6 +1,6 @@
 
 import React, { useState, useRef } from 'react';
-import { Fire, Trash2 } from 'lucide-react';
+import { Flame, Trash2 } from 'lucide-react';
 import { List } from '../types';
 
 interface ListCardProps {
@@ -81,7 +81,7 @@ const ListCard: React.FC<ListCardProps> = ({ list, onUpdateList, onDeleteList, o
         <div className="flex items-center gap-2">
           {priorityCount > 0 && (
             <div className="flex items-center gap-1 bg-red-100 px-2 py-1 rounded-full">
-              <Fire size={12} className="text-red-500" />
+              <Flame size={12} className="text-red-500" />
               <span className="text-xs text-red-600 font-medium">{priorityCount}</span>
             </div>
           )}
@@ -106,7 +106,7 @@ const ListCard: React.FC<ListCardProps> = ({ list, onUpdateList, onDeleteList, o
             <div key={item.id} className="flex items-center gap-2 text-sm text-gray-600">
               <div className="w-2 h-2 bg-red-300 rounded-full"></div>
               <span className={item.isPriority ? 'text-red-600 font-medium' : ''}>{item.text}</span>
-              {item.isPriority && <Fire size={12} className="text-red-500" />}
+              {item.isPriority && <Flame size={12} className="text-red-500" />}
             </div>
           ))
         )}
